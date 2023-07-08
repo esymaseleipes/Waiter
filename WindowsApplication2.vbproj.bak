@@ -1,0 +1,1348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E095B057-6A49-49F0-BBFE-7C8D87F1CC2F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>WAITER</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.1</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v18.2.UI, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Docs.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v18.2.Drawing, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2.Extensions, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="ggSERVICES, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ggSERVICES.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseFrms\BaseRibbonForm.Designer.vb">
+      <DependentUpon>BaseRibbonForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseFrms\BaseRibbonForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseFrms\PrivtServiceReport\FrmPrintService.Designer.vb">
+      <DependentUpon>FrmPrintService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseFrms\PrivtServiceReport\FrmPrintService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseFrms\PrivtServiceReport\OrderTo.Designer.vb">
+      <DependentUpon>OrderTo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseFrms\PrivtServiceReport\OrderTo.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseFrms\PrivtServiceReport\ReceiptReport.Designer.vb">
+      <DependentUpon>ReceiptReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseFrms\PrivtServiceReport\ReceiptReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseFrms\PrivtServiceReport\Sarema.vb" />
+    <Compile Include="BaseFrms\PrivtServiceReport\SetSubsIdFrm.Designer.vb">
+      <DependentUpon>SetSubsIdFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseFrms\PrivtServiceReport\SetSubsIdFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseFrms\PropertyFrm.Designer.vb">
+      <DependentUpon>PropertyFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseFrms\PropertyFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseFrms\SampleFrm.Designer.vb">
+      <DependentUpon>SampleFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseFrms\SampleFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseFrms\WaitForm1.Designer.vb">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseFrms\WaitForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\ClsAttribGenerator.vb" />
+    <Compile Include="Class\ClsCollection.vb" />
+    <Compile Include="Class\ClsDocTransaction.vb" />
+    <Compile Include="Class\ClsDocumentGenerator.vb" />
+    <Compile Include="Class\ClsRegKeys.vb" />
+    <Compile Include="Class\ClsTransHelper.vb" />
+    <Compile Include="Class\DynamicXpo.vb" />
+    <Compile Include="Controler\AccountControler.vb" />
+    <Compile Include="Controler\AccountTransController.vb" />
+    <Compile Include="Controler\CustomerController.vb" />
+    <Compile Include="Controler\DocController.vb" />
+    <Compile Include="Controler\FixController.vb" />
+    <Compile Include="Controler\ProductController.vb" />
+    <Compile Include="Controler\ProductTransController.vb" />
+    <Compile Include="Controler\SSTORECollection.vb" />
+    <Compile Include="Controls\CtrlAttribPerGroup.Designer.vb">
+      <DependentUpon>CtrlAttribPerGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlAttribPerGroup.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlProductBrowser.Designer.vb">
+      <DependentUpon>CtrlProductBrowser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlProductBrowser.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MyCheckedComboBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Accounts\FrmAccountsList.Designer.vb">
+      <DependentUpon>FrmAccountsList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Accounts\FrmAccountsList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Accounts\FrmAccountTrans.Designer.vb">
+      <DependentUpon>FrmAccountTrans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Accounts\FrmAccountTrans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Accounts\FrmAccountTransCollection.Designer.vb">
+      <DependentUpon>FrmAccountTransCollection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Accounts\FrmAccountTransCollection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Accounts\FrmAccountTrnDesign.Designer.vb">
+      <DependentUpon>FrmAccountTrnDesign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Accounts\FrmAccountTrnDesign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\ClsTrans.vb" />
+    <Compile Include="Class\IcanCrud.vb" />
+    <Compile Include="Class\KefDoc.vb" />
+    <Compile Include="Class\MyLogonData.vb" />
+    <Compile Include="Controls\CtrlCustomerTrans.Designer.vb">
+      <DependentUpon>CtrlCustomerTrans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlCustomerTrans.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\AX\FrmAX.Designer.vb">
+      <DependentUpon>FrmAX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\AX\FrmAX.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Company\FrmSubCompanyList.Designer.vb">
+      <DependentUpon>FrmSubCompanyList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Company\FrmSubCompanyList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Doc\EjoElements.Designer.vb">
+      <DependentUpon>EjoElements.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Doc\EjoElements.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\FrmError.Designer.vb">
+      <DependentUpon>FrmError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\FrmError.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\FrmHost.Designer.vb">
+      <DependentUpon>FrmHost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\FrmHost.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\FrmRooms.Designer.vb">
+      <DependentUpon>FrmRooms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\FrmRooms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\mytestfrm.Designer.vb">
+      <DependentUpon>mytestfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\mytestfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\PAYTYPES\FrmPayTypes.Designer.vb">
+      <DependentUpon>FrmPayTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\PAYTYPES\FrmPayTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Pos\FrmPosConfig.Designer.vb">
+      <DependentUpon>FrmPosConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Pos\FrmPosConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Printers\FrmPrinters.Designer.vb">
+      <DependentUpon>FrmPrinters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Printers\FrmPrinters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Products\FrmFA.Designer.vb">
+      <DependentUpon>FrmFA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Products\FrmFA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Products\FrmStockUnit.Designer.vb">
+      <DependentUpon>FrmStockUnit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Products\FrmStockUnit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Products\ProductAttributes\FrmAttributesNew.Designer.vb">
+      <DependentUpon>FrmAttributesNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Products\ProductAttributes\FrmAttributesNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Products\ProductAttributes\FrmCategoryToAttributes.Designer.vb">
+      <DependentUpon>FrmCategoryToAttributes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Products\ProductAttributes\FrmCategoryToAttributes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Products\ProductTrans\FrmProductTrans.Designer.vb">
+      <DependentUpon>FrmProductTrans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Products\ProductTrans\FrmProductTrans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Products\ProductTrans\FrmProductTranses.Designer.vb">
+      <DependentUpon>FrmProductTranses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Products\ProductTrans\FrmProductTranses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Rools\FrmRolls.Designer.vb">
+      <DependentUpon>FrmRolls.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Rools\FrmRolls.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmPurchaseTransDesignList.Designer.vb">
+      <DependentUpon>FrmPurchaseTransDesignList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmPurchaseTransDesignList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmTrnums.Designer.vb">
+      <DependentUpon>FrmTrnums.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmTrnums.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Products\ProductAttributes\FrmAttributes.Designer.vb">
+      <DependentUpon>FrmAttributes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Products\ProductAttributes\FrmAttributes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Products\ProductAttributes\FrmAttributeVals.Designer.vb">
+      <DependentUpon>FrmAttributeVals.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Products\ProductAttributes\FrmAttributeVals.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmTrnumsList.Designer.vb">
+      <DependentUpon>FrmTrnumsList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmTrnumsList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Trapezia\FrmTrapezia.Designer.vb">
+      <DependentUpon>FrmTrapezia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Trapezia\FrmTrapezia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Trapezia\FrmTrapeziaGroup.Designer.vb">
+      <DependentUpon>FrmTrapeziaGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Trapezia\FrmTrapeziaGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Users\FrmUsers.Designer.vb">
+      <DependentUpon>FrmUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Users\FrmUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Users\FrmUserToStation.Designer.vb">
+      <DependentUpon>FrmUserToStation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Users\FrmUserToStation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel\Arivals\FrmArrivals.Designer.vb">
+      <DependentUpon>FrmArrivals.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel\Arivals\FrmArrivals.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel\Arivals\FrmHotelArrival.Designer.vb">
+      <DependentUpon>FrmHotelArrival.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel\Arivals\FrmHotelArrival.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel\Arivals\FrmPlano.Designer.vb">
+      <DependentUpon>FrmPlano.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel\Arivals\FrmPlano.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel\Formes\BedTypeFolder\FrmBedType.Designer.vb">
+      <DependentUpon>FrmBedType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel\Formes\BedTypeFolder\FrmBedType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel\Formes\CustomerAges\FrmHotelCustomerAges.Designer.vb">
+      <DependentUpon>FrmHotelCustomerAges.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel\Formes\CustomerAges\FrmHotelCustomerAges.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel\Formes\Periods\HotelFrmPeriod.Designer.vb">
+      <DependentUpon>HotelFrmPeriod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel\Formes\Periods\HotelFrmPeriod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel\Formes\PriceratesFolder\FrmHotelPriceRates.Designer.vb">
+      <DependentUpon>FrmHotelPriceRates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel\Formes\PriceratesFolder\FrmHotelPriceRates.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel\Formes\RoomBoardFolder\FrmHotelRoomBoard.Designer.vb">
+      <DependentUpon>FrmHotelRoomBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel\Formes\RoomBoardFolder\FrmHotelRoomBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel\Formes\RoomsFolder\FrmHotelRooms.Designer.vb">
+      <DependentUpon>FrmHotelRooms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel\Formes\RoomsFolder\FrmHotelRooms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel\Formes\RoomType\FrmHotelRoomType.Designer.vb">
+      <DependentUpon>FrmHotelRoomType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel\Formes\RoomType\FrmHotelRoomType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel\Formes\RoomType\FrmHotelRoomTypes.Designer.vb">
+      <DependentUpon>FrmHotelRoomTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel\Formes\RoomType\FrmHotelRoomTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KefModelCode\AccountsTrnDesc.Designer.vb">
+      <DependentUpon>AccountsTrnDesc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\AccountsTrnDesc.vb" />
+    <Compile Include="KefModelCode\AccountTrans.Designer.vb">
+      <DependentUpon>AccountTrans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\AccountTrans.vb" />
+    <Compile Include="KefModelCode\AdditionalOccupants.Designer.vb">
+      <DependentUpon>AdditionalOccupants.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\AdditionalOccupants.vb" />
+    <Compile Include="KefModelCode\Attribute.Designer.vb">
+      <DependentUpon>Attribute.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\Attribute.vb" />
+    <Compile Include="KefModelCode\AttributeVals.Designer.vb">
+      <DependentUpon>AttributeVals.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\AttributeVals.vb" />
+    <Compile Include="KefModelCode\AttrVal.Designer.vb">
+      <DependentUpon>AttrVal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\AttrVal.vb" />
+    <Compile Include="KefModelCode\BedType.Designer.vb">
+      <DependentUpon>BedType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\BedType.vb" />
+    <Compile Include="KefModelCode\CancelBookingPolicy.Designer.vb">
+      <DependentUpon>CancelBookingPolicy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\CancelBookingPolicy.vb" />
+    <Compile Include="KefModelCode\CategoryAttributes.Designer.vb">
+      <DependentUpon>CategoryAttributes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\CategoryAttributes.vb" />
+    <Compile Include="KefModelCode\Comments.Designer.vb">
+      <DependentUpon>Comments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\Comments.vb" />
+    <Compile Include="KefModelCode\COMPANYPARAMS.Designer.vb">
+      <DependentUpon>COMPANYPARAMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\COMPANYPARAMS.vb" />
+    <Compile Include="KefModelCode\CustomerAgesRange.Designer.vb">
+      <DependentUpon>CustomerAgesRange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\CustomerAgesRange.vb" />
+    <Compile Include="KefModelCode\EarlyBooking.Designer.vb">
+      <DependentUpon>EarlyBooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\EarlyBooking.vb" />
+    <Compile Include="KefModelCode\HardJob.Designer.vb">
+      <DependentUpon>HardJob.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\HardJob.vb" />
+    <Compile Include="KefModelCode\LOTMAST.Designer.vb">
+      <DependentUpon>LOTMAST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\LOTMAST.vb" />
+    <Compile Include="KefModelCode\PERIODS.Designer.vb">
+      <DependentUpon>PERIODS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\PERIODS.vb" />
+    <Compile Include="KefModelCode\PosOrder.Designer.vb">
+      <DependentUpon>PosOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\PosOrder.vb" />
+    <Compile Include="KefModelCode\PosOrderLine.Designer.vb">
+      <DependentUpon>PosOrderLine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\PosOrderLine.vb" />
+    <Compile Include="KefModelCode\PriceRates.Designer.vb">
+      <DependentUpon>PriceRates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\PriceRates.vb" />
+    <Compile Include="KefModelCode\ProductAttributes.Designer.vb">
+      <DependentUpon>ProductAttributes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\ProductAttributes.vb" />
+    <Compile Include="KefModelCode\RoomBoard.Designer.vb">
+      <DependentUpon>RoomBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\RoomBoard.vb" />
+    <Compile Include="KefModelCode\RoomCharacteristics.Designer.vb">
+      <DependentUpon>RoomCharacteristics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\RoomCharacteristics.vb" />
+    <Compile Include="KefModelCode\RoomPeriods.Designer.vb">
+      <DependentUpon>RoomPeriods.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\RoomPeriods.vb" />
+    <Compile Include="KefModelCode\RoomTransToCustomer.Designer.vb">
+      <DependentUpon>RoomTransToCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\RoomTransToCustomer.vb" />
+    <Compile Include="KefModelCode\RoomType.Designer.vb">
+      <DependentUpon>RoomType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\RoomType.vb" />
+    <Compile Include="KefModelCode\SALESMEN.Designer.vb">
+      <DependentUpon>SALESMEN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\SALESMEN.vb" />
+    <Compile Include="KefModelCode\SynalTransType.Designer.vb">
+      <DependentUpon>SynalTransType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\SynalTransType.vb" />
+    <Compile Include="ENTITYS\TransDesign\FrmCustTransDesign.Designer.vb">
+      <DependentUpon>FrmCustTransDesign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmCustTransDesign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Doc\InputGrid.Designer.vb">
+      <DependentUpon>InputGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Doc\InputGrid.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Doc\InputGridTotals.designer.vb">
+      <DependentUpon>InputGridTotals.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Doc\InputGridTotals.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Customers\FrmCustomerKartela.Designer.vb">
+      <DependentUpon>FrmCustomerKartela.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Customers\FrmCustomerKartela.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Customers\FrmTables.Designer.vb">
+      <DependentUpon>FrmTables.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Customers\FrmTables.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Customers\FrmCustomer.Designer.vb">
+      <DependentUpon>FrmCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Customers\FrmCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Customers\FrmCustomers.Designer.vb">
+      <DependentUpon>FrmCustomers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Customers\FrmCustomers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Doc\BaseDoc.Designer.vb">
+      <DependentUpon>BaseDoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Doc\BaseDoc.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Doc\NewDocForm.Designer.vb">
+      <DependentUpon>NewDocForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Doc\NewDocForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KefModelCode\Accounts.Designer.vb">
+      <DependentUpon>Accounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\Accounts.vb" />
+    <Compile Include="KefModelCode\BLINE2.Designer.vb">
+      <DependentUpon>BLINE2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\BLINE2.vb" />
+    <Compile Include="KefModelCode\BMAST1.Designer.vb">
+      <DependentUpon>BMAST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\BMAST1.vb" />
+    <Compile Include="KefModelCode\BMAST2.Designer.vb">
+      <DependentUpon>BMAST2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\BMAST2.vb" />
+    <Compile Include="KefModelCode\NMCOST.Designer.vb">
+      <DependentUpon>NMCOST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\NMCOST.vb" />
+    <Compile Include="KefModelCode\NSPMINV.Designer.vb">
+      <DependentUpon>NSPMINV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\NSPMINV.vb" />
+    <Compile Include="KefModelCode\PMAST.Designer.vb">
+      <DependentUpon>PMAST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\PMAST.vb" />
+    <Compile Include="KefModelCode\PTRN.Designer.vb">
+      <DependentUpon>PTRN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\PTRN.vb" />
+    <Compile Include="KefModelCode\ScriptClass.vb" />
+    <Compile Include="Class\MainCnfg.vb" />
+    <Compile Include="KefModelCode\STOCKSPACE.Designer.vb">
+      <DependentUpon>STOCKSPACE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\STOCKSPACE.vb" />
+    <Compile Include="KefModelCode\TRAPEZIAGROUP.Designer.vb">
+      <DependentUpon>TRAPEZIAGROUP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\TRAPEZIAGROUP.vb" />
+    <Compile Include="KefModelCode\UserToStation.Designer.vb">
+      <DependentUpon>UserToStation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\UserToStation.vb" />
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogon.Designer.vb">
+      <DependentUpon>FormLogon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KefModelCode\City.Designer.vb">
+      <DependentUpon>City.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\City.vb" />
+    <Compile Include="KefModelCode\COUNTRY.Designer.vb">
+      <DependentUpon>COUNTRY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\COUNTRY.vb" />
+    <Compile Include="KefModelCode\DOY.Designer.vb">
+      <DependentUpon>DOY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\DOY.vb" />
+    <Compile Include="KefModelCode\Enumerators.vb" />
+    <Compile Include="KefModelCode\MasterTablesRoll.Designer.vb">
+      <DependentUpon>MasterTablesRoll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\MasterTablesRoll.vb" />
+    <Compile Include="KefModelCode\MyUsers.Designer.vb">
+      <DependentUpon>MyUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\MyUsers.vb" />
+    <Compile Include="KefModelCode\PosCnfg.Designer.vb">
+      <DependentUpon>PosCnfg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\PosCnfg.vb" />
+    <Compile Include="KefModelCode\PosRoll.Designer.vb">
+      <DependentUpon>PosRoll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\PosRoll.vb" />
+    <Compile Include="KefModelCode\Printers.Designer.vb">
+      <DependentUpon>Printers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\Printers.vb" />
+    <Compile Include="KefModelCode\Profesion.Designer.vb">
+      <DependentUpon>Profesion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\Profesion.vb" />
+    <Compile Include="KefModelCode\PURCHDESC.Designer.vb">
+      <DependentUpon>PURCHDESC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\PURCHDESC.vb" />
+    <Compile Include="KefModelCode\Roll.Designer.vb">
+      <DependentUpon>Roll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\Roll.vb" />
+    <Compile Include="KefModelCode\Room.Designer.vb">
+      <DependentUpon>Room.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\Room.vb" />
+    <Compile Include="KefModelCode\RoomTrans.Designer.vb">
+      <DependentUpon>RoomTrans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\RoomTrans.vb" />
+    <Compile Include="KefModelCode\SALESDESC.Designer.vb">
+      <DependentUpon>SALESDESC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\SALESDESC.vb" />
+    <Compile Include="KefModelCode\SSTORE.Designer.vb">
+      <DependentUpon>SSTORE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\SSTORE.vb" />
+    <Compile Include="KefModelCode\STORTRNDESC.Designer.vb">
+      <DependentUpon>STORTRNDESC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\STORTRNDESC.vb" />
+    <Compile Include="KefModelCode\SUBSIDS.Designer.vb">
+      <DependentUpon>SUBSIDS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\SUBSIDS.vb" />
+    <Compile Include="KefModelCode\SUPLTRNDESCR.Designer.vb">
+      <DependentUpon>SUPLTRNDESCR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\SUPLTRNDESCR.vb" />
+    <Compile Include="KefModelCode\TABLES.Designer.vb">
+      <DependentUpon>TABLES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\TABLES.vb" />
+    <Compile Include="MyNumPad.Designer.vb">
+      <DependentUpon>MyNumPad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MyNumPad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NumPad.vb" />
+    <Compile Include="ENTITYS\Products\FrmProductComments.Designer.vb">
+      <DependentUpon>FrmProductComments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Products\FrmProductComments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Products\FrmProducts.Designer.vb">
+      <DependentUpon>FrmProducts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Products\FrmProducts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\CtrlProduct.Designer.vb">
+      <DependentUpon>CtrlProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlProduct.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Products\FrmSeason.Designer.vb">
+      <DependentUpon>FrmSeason.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Products\FrmSeason.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Products\FrmTEst.Designer.vb">
+      <DependentUpon>FrmTEst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Products\FrmTEst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\ClsShareFunctions.vb" />
+    <Compile Include="ENTITYS\Products\StorFeat1Frm.Designer.vb">
+      <DependentUpon>StorFeat1Frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Products\StorFeat1Frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\Products\StorFeat2Frm.Designer.vb">
+      <DependentUpon>StorFeat2Frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Products\StorFeat2Frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\XmlClass.vb" />
+    <Compile Include="Controls\CtrlAddEditDeletevb.Designer.vb">
+      <DependentUpon>CtrlAddEditDeletevb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtrlAddEditDeletevb.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KefModelCode\CMAST.Designer.vb">
+      <DependentUpon>CMAST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\CMAST.vb" />
+    <Compile Include="KefModelCode\ConnectionHelper.vb" />
+    <Compile Include="KefModelCode\CPOPEN.Designer.vb">
+      <DependentUpon>CPOPEN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\CPOPEN.vb" />
+    <Compile Include="KefModelCode\CTRN.Designer.vb">
+      <DependentUpon>CTRN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\CTRN.vb" />
+    <Compile Include="KefModelCode\CUSTFEAT1.Designer.vb">
+      <DependentUpon>CUSTFEAT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\CUSTFEAT1.vb" />
+    <Compile Include="KefModelCode\CUSTFEAT2.Designer.vb">
+      <DependentUpon>CUSTFEAT2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\CUSTFEAT2.vb" />
+    <Compile Include="KefModelCode\CUSTTRNDESC.Designer.vb">
+      <DependentUpon>CUSTTRNDESC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\CUSTTRNDESC.vb" />
+    <Compile Include="KefModelCode\EXTEXT.Designer.vb">
+      <DependentUpon>EXTEXT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\EXTEXT.vb" />
+    <Compile Include="KefModelCode\GLKFORMS.Designer.vb">
+      <DependentUpon>GLKFORMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\GLKFORMS.vb" />
+    <Compile Include="KefModelCode\INDEXINGFIELD.Designer.vb">
+      <DependentUpon>INDEXINGFIELD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\INDEXINGFIELD.vb" />
+    <Compile Include="KefModelCode\MyTmpSmast.Designer.vb">
+      <DependentUpon>MyTmpSmast.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\MyTmpSmast.vb" />
+    <Compile Include="KefModelCode\NEMAST.Designer.vb">
+      <DependentUpon>NEMAST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\NEMAST.vb" />
+    <Compile Include="KefModelCode\PAYMODES.Designer.vb">
+      <DependentUpon>PAYMODES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\PAYMODES.vb" />
+    <Compile Include="KefModelCode\SENDMODES.Designer.vb">
+      <DependentUpon>SENDMODES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\SENDMODES.vb" />
+    <Compile Include="KefModelCode\SMAST.Designer.vb">
+      <DependentUpon>SMAST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\SMAST.vb" />
+    <Compile Include="KefModelCode\SSEAZON.Designer.vb">
+      <DependentUpon>SSEAZON.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\SSEAZON.vb" />
+    <Compile Include="KefModelCode\STOCKTABLE1.Designer.vb">
+      <DependentUpon>STOCKTABLE1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\STOCKTABLE1.vb" />
+    <Compile Include="KefModelCode\STOCKUNIT.Designer.vb">
+      <DependentUpon>STOCKUNIT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\STOCKUNIT.vb" />
+    <Compile Include="KefModelCode\STORFEAT1.Designer.vb">
+      <DependentUpon>STORFEAT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\STORFEAT1.vb" />
+    <Compile Include="KefModelCode\STORFEAT2.Designer.vb">
+      <DependentUpon>STORFEAT2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\STORFEAT2.vb" />
+    <Compile Include="KefModelCode\STRN.Designer.vb">
+      <DependentUpon>STRN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\STRN.vb" />
+    <Compile Include="KefModelCode\TRNUMS.Designer.vb">
+      <DependentUpon>TRNUMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\TRNUMS.vb" />
+    <Compile Include="KefModelCode\VAT.Designer.vb">
+      <DependentUpon>VAT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\VAT.vb" />
+    <Compile Include="KefModelCode\VLINE2.Designer.vb">
+      <DependentUpon>VLINE2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\VLINE2.vb" />
+    <Compile Include="KefModelCode\VMAST1.Designer.vb">
+      <DependentUpon>VMAST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\VMAST1.vb" />
+    <Compile Include="KefModelCode\VMAST2.Designer.vb">
+      <DependentUpon>VMAST2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\VMAST2.vb" />
+    <Compile Include="KefModelCode\XARAKTIRISTIKA.Designer.vb">
+      <DependentUpon>XARAKTIRISTIKA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\XARAKTIRISTIKA.vb" />
+    <Compile Include="KefModelCode\XARAKTIRISTIKAVALS.Designer.vb">
+      <DependentUpon>XARAKTIRISTIKAVALS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\XARAKTIRISTIKAVALS.vb" />
+    <Compile Include="KefModelCode\YpoomadaToXarakt.Designer.vb">
+      <DependentUpon>YpoomadaToXarakt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KefModelCode\YpoomadaToXarakt.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Start.vb" />
+    <Compile Include="ENTITYS\Customers\TransCash.Designer.vb">
+      <DependentUpon>TransCash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\Customers\TransCash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmCustomerTransDesignList.Designer.vb">
+      <DependentUpon>FrmCustomerTransDesignList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmCustomerTransDesignList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmProductsTransDesign.Designer.vb">
+      <DependentUpon>FrmProductsTransDesign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmProductsTransDesign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmProductsTransDesignList.Designer.vb">
+      <DependentUpon>FrmProductsTransDesignList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmProductsTransDesignList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmSalesTransDesignList.Designer.vb">
+      <DependentUpon>FrmSalesTransDesignList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmSalesTransDesignList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmSupplierTransDesignList.Designer.vb">
+      <DependentUpon>FrmSupplierTransDesignList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmSupplierTransDesignList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmSupplTransDesign.Designer.vb">
+      <DependentUpon>FrmSupplTransDesign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYS\TransDesign\FrmSupplTransDesign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseFrms\BaseRibbonForm.resx">
+      <DependentUpon>BaseRibbonForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseFrms\PrivtServiceReport\FrmPrintService.resx">
+      <DependentUpon>FrmPrintService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseFrms\PrivtServiceReport\OrderTo.resx">
+      <DependentUpon>OrderTo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseFrms\PrivtServiceReport\ReceiptReport.resx">
+      <DependentUpon>ReceiptReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseFrms\PrivtServiceReport\SetSubsIdFrm.resx">
+      <DependentUpon>SetSubsIdFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseFrms\PropertyFrm.resx">
+      <DependentUpon>PropertyFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseFrms\SampleFrm.resx">
+      <DependentUpon>SampleFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseFrms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlAttribPerGroup.resx">
+      <DependentUpon>CtrlAttribPerGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlProductBrowser.resx">
+      <DependentUpon>CtrlProductBrowser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Accounts\FrmAccountsList.resx">
+      <DependentUpon>FrmAccountsList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Accounts\FrmAccountTrans.resx">
+      <DependentUpon>FrmAccountTrans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Accounts\FrmAccountTransCollection.resx">
+      <DependentUpon>FrmAccountTransCollection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Accounts\FrmAccountTrnDesign.resx">
+      <DependentUpon>FrmAccountTrnDesign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlCustomerTrans.resx">
+      <DependentUpon>CtrlCustomerTrans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\AX\FrmAX.resx">
+      <DependentUpon>FrmAX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Company\FrmSubCompanyList.resx">
+      <DependentUpon>FrmSubCompanyList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Doc\EjoElements.resx">
+      <DependentUpon>EjoElements.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\FrmError.resx">
+      <DependentUpon>FrmError.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\FrmHost.resx">
+      <DependentUpon>FrmHost.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\FrmRooms.resx">
+      <DependentUpon>FrmRooms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\mytestfrm.resx">
+      <DependentUpon>mytestfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\PAYTYPES\FrmPayTypes.resx">
+      <DependentUpon>FrmPayTypes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Pos\FrmPosConfig.resx">
+      <DependentUpon>FrmPosConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Printers\FrmPrinters.resx">
+      <DependentUpon>FrmPrinters.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Products\FrmFA.resx">
+      <DependentUpon>FrmFA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Products\FrmStockUnit.resx">
+      <DependentUpon>FrmStockUnit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Products\ProductAttributes\FrmAttributesNew.resx">
+      <DependentUpon>FrmAttributesNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Products\ProductAttributes\FrmCategoryToAttributes.resx">
+      <DependentUpon>FrmCategoryToAttributes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Products\ProductTrans\FrmProductTrans.resx">
+      <DependentUpon>FrmProductTrans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Products\ProductTrans\FrmProductTranses.resx">
+      <DependentUpon>FrmProductTranses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Rools\FrmRolls.resx">
+      <DependentUpon>FrmRolls.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\TransDesign\FrmCustTransDesign.resx">
+      <DependentUpon>FrmCustTransDesign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Doc\InputGrid.resx">
+      <DependentUpon>InputGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Doc\InputGridTotals.resx">
+      <DependentUpon>InputGridTotals.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Customers\FrmCustomerKartela.resx">
+      <DependentUpon>FrmCustomerKartela.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Customers\FrmTables.resx">
+      <DependentUpon>FrmTables.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Customers\FrmCustomer.resx">
+      <DependentUpon>FrmCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Customers\FrmCustomers.resx">
+      <DependentUpon>FrmCustomers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Doc\BaseDoc.resx">
+      <DependentUpon>BaseDoc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Doc\NewDocForm.resx">
+      <DependentUpon>NewDocForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\TransDesign\FrmPurchaseTransDesignList.resx">
+      <DependentUpon>FrmPurchaseTransDesignList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\TransDesign\FrmTrnums.resx">
+      <DependentUpon>FrmTrnums.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Products\ProductAttributes\FrmAttributes.resx">
+      <DependentUpon>FrmAttributes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Products\ProductAttributes\FrmAttributeVals.resx">
+      <DependentUpon>FrmAttributeVals.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\TransDesign\FrmTrnumsList.resx">
+      <DependentUpon>FrmTrnumsList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Trapezia\FrmTrapezia.resx">
+      <DependentUpon>FrmTrapezia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Trapezia\FrmTrapeziaGroup.resx">
+      <DependentUpon>FrmTrapeziaGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Users\FrmUsers.resx">
+      <DependentUpon>FrmUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Users\FrmUserToStation.resx">
+      <DependentUpon>FrmUserToStation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel\Arivals\FrmArrivals.resx">
+      <DependentUpon>FrmArrivals.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel\Arivals\FrmHotelArrival.resx">
+      <DependentUpon>FrmHotelArrival.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel\Arivals\FrmPlano.resx">
+      <DependentUpon>FrmPlano.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel\Formes\BedTypeFolder\FrmBedType.resx">
+      <DependentUpon>FrmBedType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel\Formes\CustomerAges\FrmHotelCustomerAges.resx">
+      <DependentUpon>FrmHotelCustomerAges.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel\Formes\Periods\HotelFrmPeriod.resx">
+      <DependentUpon>HotelFrmPeriod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel\Formes\PriceratesFolder\FrmHotelPriceRates.resx">
+      <DependentUpon>FrmHotelPriceRates.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel\Formes\RoomBoardFolder\FrmHotelRoomBoard.resx">
+      <DependentUpon>FrmHotelRoomBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel\Formes\RoomsFolder\FrmHotelRooms.resx">
+      <DependentUpon>FrmHotelRooms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel\Formes\RoomType\FrmHotelRoomType.resx">
+      <DependentUpon>FrmHotelRoomType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel\Formes\RoomType\FrmHotelRoomTypes.resx">
+      <DependentUpon>FrmHotelRoomTypes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogon.resx">
+      <DependentUpon>FormLogon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyNumPad.resx">
+      <DependentUpon>MyNumPad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Products\FrmProductComments.resx">
+      <DependentUpon>FrmProductComments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Products\FrmProducts.resx">
+      <DependentUpon>FrmProducts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlProduct.resx">
+      <DependentUpon>CtrlProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Products\FrmSeason.resx">
+      <DependentUpon>FrmSeason.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Products\FrmTEst.resx">
+      <DependentUpon>FrmTEst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Products\StorFeat1Frm.resx">
+      <DependentUpon>StorFeat1Frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Products\StorFeat2Frm.resx">
+      <DependentUpon>StorFeat2Frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CtrlAddEditDeletevb.resx">
+      <DependentUpon>CtrlAddEditDeletevb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\Customers\TransCash.resx">
+      <DependentUpon>TransCash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\TransDesign\FrmCustomerTransDesignList.resx">
+      <DependentUpon>FrmCustomerTransDesignList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\TransDesign\FrmProductsTransDesign.resx">
+      <DependentUpon>FrmProductsTransDesign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\TransDesign\FrmProductsTransDesignList.resx">
+      <DependentUpon>FrmProductsTransDesignList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\TransDesign\FrmSalesTransDesignList.resx">
+      <DependentUpon>FrmSalesTransDesignList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\TransDesign\FrmSupplierTransDesignList.resx">
+      <DependentUpon>FrmSupplierTransDesignList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITYS\TransDesign\FrmSupplTransDesign.resx">
+      <DependentUpon>FrmSupplTransDesign.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KefModel.xpo">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KefModel.xpo.diagram">
+      <DependentUpon>KefModel.xpo</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\WindowsApplication1.Cmp300.SMAST.datasource" />
+    <None Include="My Project\DataSources\WindowsApplication1.Cmp300.SSEAZON.datasource" />
+    <None Include="My Project\DataSources\WindowsApplication1.Cmp300.STORFEAT1.datasource" />
+    <None Include="My Project\DataSources\WindowsApplication1.Cmp300.STORFEAT2.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ENTITYS\Customers\Doc\" />
+    <Folder Include="Hotel\Class\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxCOECRCOMLib">
+      <Guid>{BACB4CC3-A21B-11D5-8517-00304F03B28E}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="BarTender">
+      <Guid>{D58562C1-E51B-11CF-8941-00A024A9083F}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="COECRCOMLib">
+      <Guid>{BACB4CC3-A21B-11D5-8517-00304F03B28E}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSScriptControl">
+      <Guid>{0E59F1D2-1FBE-11D0-8FF2-00A0D10038BC}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\images.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
